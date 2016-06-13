@@ -1,0 +1,18 @@
+/* 
+    To compile sass: 
+
+        sass --watch styles/main.scss:styles/main.css
+
+*/
+
+$light-grey: #e9e9e9;
+$medium-grey: #828282;
+
+body {
+    font-family: 'Questrial', sans-serif;
+}
+
+@import '../components/widget/widget.scss';
+@import '../components/top_banner/top_banner.scss';
+@import '../components/task_list/task_list.scss';
+@import '../components/focus_area/focus_area.scss';

@@ -1,0 +1,84 @@
+/* 
+    To compile sass: 
+
+        sass --watch styles/main.scss:styles/main.css
+
+*/
+body {
+  font-family: 'Questrial', sans-serif; }
+
+.widget_component {
+  border: 1px solid #e9e9e9;
+  padding: 20px;
+  margin-top: 20px;
+  position: relative;
+  border-radius: 2px; }
+  .widget_component .widget-title {
+    color: #828282;
+    font-size: 1.2em;
+    text-align: center;
+    position: absolute;
+    left: 35%;
+    top: -20px;
+    background-color: white;
+    padding: 10px 40px 0px 40px; }
+
+.top_banner_component {
+  height: 200px;
+  border-bottom: 1px solid #e9e9e9; }
+  .top_banner_component .left_banner,
+  .top_banner_component .right_banner {
+    width: 50%;
+    height: 100%;
+    display: inline;
+    position: relative; }
+  .top_banner_component .left_banner {
+    border-right: 1px solid #e9e9e9;
+    float: left; }
+  .top_banner_component .right_banner {
+    float: right;
+    background-image: url("../images/beachdemo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -70px; }
+  .top_banner_component .quote {
+    position: absolute;
+    bottom: 0px;
+    left: 50%; }
+
+.task_list_component .task_tile {
+  height: 30px;
+  color: #828282;
+  border: 1px solid #e9e9e9;
+  margin-bottom: 5px;
+  border-radius: 2px;
+  padding: 5px 15px 5px 15px; }
+.task_list_component .task_title,
+.task_list_component .task_attributes {
+  height: 100%;
+  display: inline;
+  position: relative; }
+.task_list_component .task_title {
+  width: 70%;
+  float: left; }
+.task_list_component .task_attributes {
+  width: 30%;
+  float: right; }
+  .task_list_component .task_attributes .task_attribute {
+    float: right; }
+
+.focus_area_component {
+  height: 40px; }
+  .focus_area_component .focus_area {
+    height: 20px;
+    display: inline;
+    position: relative;
+    width: 30%;
+    float: left;
+    text-align: center;
+    border: 1px solid #e9e9e9;
+    height: 100%; }
+    .focus_area_component .focus_area:nth-child(2), .focus_area_component .focus_area:nth-child(3) {
+      margin-left: 5%; }
+
+/*# sourceMappingURL=main.css.map */

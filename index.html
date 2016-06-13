@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="flovigo">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Flovigo</title>
+    <!-- #FONTS -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+    <!-- #STYLES -->
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+
+<body ng-controller="mainController">
+        
+    <fv-top-banner></fv-top-banner>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <fv-widget title="Focus area">
+                    <fv-focus-area></fv-focus-area>
+                </fv-widget>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <fv-widget title="Tasks">
+                    <fv-task-list></fv-task-list>
+                </fv-widget>
+            </div>
+            <div class="col-md-4">
+                <fv-widget title="Core"></fv-widget>
+            </div>
+        </div>
+    </div>
+    <!-- #SCRIPTS -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js?v=18"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/lodash/dist/lodash.min.js"></script>
+    <script src="bower_components/moment/min/moment.min.js"></script>
+    <!-- #YOUR SCRIPTS -->
+    <script src="app.js"></script>
+    <script src="routes.js"></script>
+    <script src="main.controller.js"></script>
+    <script src="components/widget/widget.directive.js"></script>
+    <script src="components/top_banner/top_banner.directive.js"></script>
+    <script src="components/task_list/task_list.directive.js"></script>
+    <script src="components/focus_area/focus_area.directive.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1 @@
+flovigo = angular.module('flovigo', ['ngRoute']);

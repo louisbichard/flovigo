@@ -1,0 +1,16 @@
+.focus_area_component {
+    height: 40px;
+    .focus_area {
+        height: 20px;
+        display: inline;
+        position: relative;
+        width: 30%;
+        float: left;
+        text-align: center;
+        border: 1px solid $light-grey;
+        height: 100%;
+        &:nth-child(2), &:nth-child(3) {
+            margin-left: 5%;
+        }
+    }
+}

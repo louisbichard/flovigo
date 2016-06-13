@@ -1,0 +1,27 @@
+.top_banner_component {
+    height: 200px;
+    border-bottom: 1px solid $light-grey;
+    .left_banner,
+    .right_banner {
+        width: 50%;
+        height: 100%;
+        display: inline;
+        position: relative;
+    }
+    .left_banner {
+        border-right: 1px solid $light-grey;
+        float: left;
+    }
+    .right_banner {
+        float: right;
+        background-image: url('../images/beachdemo.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-y: -70px;
+    }
+    .quote {
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+    }
+}

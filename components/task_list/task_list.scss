@@ -1,0 +1,27 @@
+.task_list_component {
+    .task_tile {
+        height: 30px;
+        color: $medium-grey;
+        border: 1px solid $light-grey;
+        margin-bottom: 5px;
+        border-radius: 2px;
+        padding: 5px 15px 5px 15px;
+    }
+    .task_title,
+    .task_attributes {        
+        height: 100%;
+        display: inline;
+        position: relative;
+    }
+    .task_title {
+        width: 70%;
+        float: left;
+    }
+    .task_attributes {
+        .task_attribute {
+            float: right;
+        }
+        width: 30%;
+        float: right;
+    }
+}
