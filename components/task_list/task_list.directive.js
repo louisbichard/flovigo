@@ -11,6 +11,27 @@ flovigo.directive('fvTaskList', function() {
             }, {
                 title: "A new task 2",                
                 date: moment().format('DD-MM-YYYY')
+            },{
+                title: "A new task 2",                
+                date: moment().format('DD-MM-YYYY')
+            },{
+                title: "A new task 2",                
+                date: moment().format('DD-MM-YYYY')
+            },{
+                title: "A new task 2",                
+                date: moment().format('DD-MM-YYYY')
+            },{
+                title: "A new task 2",                
+                date: moment().format('DD-MM-YYYY')
+            },{
+                title: "A new task 2",                
+                date: moment().format('DD-MM-YYYY')
+            },{
+                title: "A new task 2",                
+                date: moment().format('DD-MM-YYYY')
+            },{
+                title: "A new task 2",                
+                date: moment().format('DD-MM-YYYY')
             }];
         }
     }
