@@ -1,4 +1,5 @@
 flovigo.directive('fvCheckIn', function(
+    TaskService,
     $rootScope
 ) {
     return {
@@ -8,6 +9,9 @@ flovigo.directive('fvCheckIn', function(
         link: function($scope, $elem, $attrs, $ctrl) {
 
             console.log('loaded check in !')
+
+            var tasks = angular.copy(TaskService.get())
+            $scope.tasks = tasks.splice(0, 3);
         }
     }
 });

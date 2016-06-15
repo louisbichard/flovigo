@@ -1,0 +1,42 @@
+<div ng-if="active === 0">
+    <p>You have some tasks not viewed in a while, do you want to delete them?</p>
+    <div class="row">
+        <div class="col-md-2">
+            <p>Delete</p>
+        </div>
+        <div class="col-md-10">
+            <p>Task</p>
+        </div>
+    </div>
+    <div class="row" ng-repeat="task in tasks">
+        <div class="col-md-2">
+            <button class="btn btn-danger">
+                <i class="fa fa-trash"></i>
+            </button>
+        </div>
+        <div class="col-md-10">
+            <fv-task-tile task="task"></fv-task-tile>
+        </div>
+    </div>
+</div>
+<div ng-if="active === 1">
+    <p>These tasks are currently not aligned to your goals, do you want to complete them?</p>
+    <div class="row" ng-repeat="task in tasks">
+        <fv-task-tile task="task"></fv-task-tile>
+    </div>
+</div>
+<div ng-if="active === 2">
+    <p>You typically only complete 2 tasks in a day, today you have 4, do you want to move some of them?</p>
+    <div class="row" ng-repeat="task in tasks">
+        <fv-task-tile task="task"></fv-task-tile>
+    </div>
+</div>
+<div ng-if="active === 3">
+    <p class="text-center">You're up to date!</p>
+</div>
+<div ng-if="active === 3">
+    <p>Based on your attribute chosen focus areas, these tasks should be your top to complete</p>
+    <div class="row" ng-repeat="task in tasks">
+        <fv-task-tile task="task"></fv-task-tile>
+    </div>
+</div>

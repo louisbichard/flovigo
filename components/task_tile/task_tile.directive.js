@@ -1,22 +1,21 @@
-flovigo.directive('fvWidget', function(
+flovigo.directive('fvTaskTile', function(
     $rootScope
 ) {
     return {
         restrict: 'E',
-        templateUrl: 'components/widget/widget.html',
+        templateUrl: 'components/task_tile/task_tile.html',
         scope: {
-            title: '@',
-            help: '@'
+            task: '='
         },
         transclude: true,
         link: function($scope, $elem, $attrs, $ctrl) {
-
-            $scope.openHelp = function() {
+            $scope.taskClick = function() {
                 $rootScope.$emit('shoji:toggle_shoji', {
-                    directive_name: 'fvHelp',
-                    id: $scope.help
+                    directive_name: 'fvTaskDetail',
+                    id: _.random(0, 10)
                 });
             };
+
         }
     }
 });

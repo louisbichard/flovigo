@@ -1,0 +1,31 @@
+.task_tile_component {
+    color: red;
+    height: 30px;
+    color: $dark-grey;
+    border: 1px solid $light-grey;
+    margin-bottom: 5px;
+    border-radius: 2px;
+    padding: 5px 15px 5px 15px;
+    cursor: pointer;
+    .task_title,
+    .task_attributes {
+        height: 100%;
+        display: inline;
+        position: relative;
+    }
+    .task_title {
+        .todo_check {
+            margin-right: 10px;
+        }
+        width: 70%;
+        float: left;
+    }
+    .task_attributes {
+        .task_attribute {
+            float: right;
+        }
+        width: 30%;
+        float: right;
+    }
+}
+

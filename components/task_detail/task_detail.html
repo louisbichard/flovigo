@@ -1,17 +1,29 @@
 <div class="task_detail_component">
     <label>Task name</label>
     <input class="form-control" type="" name="">
-
     <br>
     <label>Task description</label>
-    <textarea class="form-control" rows="5"></textarea>
+    <textarea class="form-control" rows="3"></textarea>
     <br>
-    <label>Date</label>
-    <input type="date" class="form-control"></input>
+    <label>Attribute</label>
+    <select class="form-control">
+        <option>Daily chore</option>
+        <option>Meditate</option>
+        <option>Write in diary daily</option>
+        <option>Call family members more</option>
+    </select>
     <br>
-    <input type="checkbox" aria-label="...">
-    <label>Important?</label>    
-    <br>
-    <input type="checkbox" aria-label="...">
-    <label>Urgent?</label>    
+    <div class="row">
+        <div class="col-md-6">
+            <label>Due date</label>
+            <input type="date" class="form-control"></input>
+        </div>
+        <div class="col-md-6">
+            <input type="checkbox" aria-label="...">
+            <label>Important?</label>
+            <br>
+            <input type="checkbox" aria-label="...">
+            <label>Urgent?</label>
+        </div>
+    </div>
 </div>

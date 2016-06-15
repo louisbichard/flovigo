@@ -13,45 +13,49 @@
     <link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="bower_components/animate.css/animate.min.css">
     <link rel="stylesheet" type="text/css" href="styles/main.css">
-
 </head>
 
 <body ng-controller="mainController">
-
     <fv-shoji></fv-shoji>
-        
     <fv-top-banner></fv-top-banner>
-    
     <div class="container">
         <div class="row">
-            <div class="col-md-2 col-md-offset-4"> 
+            <div class="col-md-2 col-md-offset-4">
                 <select class="form-control">
-                  <option>Personal</option>
-                  <option>Work</option>
+                    <option>Personal</option>
+                    <option>Work</option>
                 </select>
             </div>
             <div class="col-md-2">
                 <button class="btn btn-default" ng-click="openCheckIn()">
-                    Check in 
-                </button>                
+                    <i class="fa fa-pencil"></i>
+                    Check in
+                </button>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
-                <fv-widget title="Focus area">
+                <fv-widget title="Attribute focus area">
                     <fv-focus-area></fv-focus-area>
                 </fv-widget>
             </div>
         </div>
         <div class="row">
             <div class="col-md-8">
-                <fv-widget title="Tasks">
+                <fv-widget title="Tasks" help="Tasks">
                     <fv-task-list></fv-task-list>
                 </fv-widget>
             </div>
             <div class="col-md-4">
                 <fv-widget title="Core">
                     <fv-core></fv-core>
+                </fv-widget>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <fv-widget title="Insights">
+                    <fv-insights></fv-insights>
                 </fv-widget>
             </div>
         </div>
@@ -67,7 +71,6 @@
     <script src="app.js"></script>
     <script src="routes.js"></script>
     <script src="main.controller.js"></script>
-
     <!-- #COMPONENTS -->
     <script src="components/widget/widget.directive.js"></script>
     <script src="components/top_banner/top_banner.directive.js"></script>
@@ -78,7 +81,9 @@
     <script src="components/core/core.directive.js"></script>
     <script src="components/check_in/check_in.directive.js"></script>
     <script src="components/tabs/tabs.directive.js"></script>
-    
+    <script src="components/task_tile/task_tile.directive.js"></script>
+    <script src="components/insights/insights.directive.js"></script>
+    <script src="components/help/help.directive.js"></script>
     <!-- #SERVICES -->
     <script src="services/task.service.js"></script>
 </body>

@@ -1,4 +1,8 @@
 <div class="widget_component animated fadeIn">
-    <p class="widget-title">{{title}}</p>
+    <p class="widget-title">
+        {{title}}
+    </p>
+    <i ng-if="help" ng-click="openHelp()" class="fa fa-question-circle-o widget_help" aria-hidden="true">
+    </i>
     <div ng-transclude></div>
 </div>

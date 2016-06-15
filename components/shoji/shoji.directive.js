@@ -30,6 +30,9 @@ flovigo.directive('fvShoji', function(
                 shoji_config: {
                     'fvTaskDetail': {
                         title: 'Task detail'
+                    },
+                    'fvHelp': {
+                        title: 'Help'
                     }
                 },
 

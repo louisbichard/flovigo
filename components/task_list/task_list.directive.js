@@ -10,13 +10,6 @@ flovigo.directive('fvTaskList', function(
 
             $scope.active = 0;
 
-            $scope.taskClick = function() {
-                $rootScope.$emit('shoji:toggle_shoji', {
-                    directive_name: 'fvTaskDetail',
-                    id: _.random(0, 10)
-                });
-            };
-
             $scope.$watch('active', function() {
                 if ($scope.active === 0) {
                     $scope.task_group = _.groupBy(TaskService.get(), TaskService.groupByUrgenceAndImportance);

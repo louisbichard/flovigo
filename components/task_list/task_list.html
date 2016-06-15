@@ -1,14 +1,11 @@
 <div class="task_list_component">
-    <fv-tabs active="active" headers="['Priority', 'This week']">
-        <div ng-repeat="(group, tasks) in task_group" class="task_group">
-            <p class="task_group_title"> {{group}} </p>
-            <div class="task_group_content">
-                <div ng-repeat="task in tasks" class="task_tile" ng-click="taskClick()">
-                    <div class="task_title">
-                        <p>{{task.title}}</p>
-                    </div>
-                    <div class="task_attributes">
-                        <p class="task_attribute">{{task.pretty_date}}</p>
+    <fv-tabs active="active" headers="['Priorities', 'This week']">
+        <div class="task_groupings">
+            <div ng-repeat="(group, tasks) in task_group" class="task_group">
+                <p class="task_group_title"> {{group}} </p>
+                <div class="task_group_content">
+                    <div ng-repeat="task in tasks">
+                        <fv-task-tile task="task"></fv-task-tile>
                     </div>
                 </div>
             </div>

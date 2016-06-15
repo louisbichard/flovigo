@@ -14,4 +14,15 @@
         background-color: $background-color;
         padding: 10px 40px 0px 40px;
     }
+    .widget_help {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        &:hover {
+            color: $accent-color;
+            transition: $transition-ease;
+            transform: scale(1.5);
+        }
+        cursor: pointer;
+    }
 }
