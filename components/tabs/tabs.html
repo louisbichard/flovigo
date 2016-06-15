@@ -1,0 +1,12 @@
+<div class="tabs_component">
+    <div class="header_container">
+        <div ng-repeat="header in headers">
+            <div
+                ng-class="{active: active === $index}" 
+                ng-click="setActive($index)"
+                class="header"
+                > {{header}} </div>
+        </div>
+    </div>
+    <div ng-transclude></div>
+</div>

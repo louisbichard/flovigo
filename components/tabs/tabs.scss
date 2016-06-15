@@ -1,0 +1,15 @@
+.tabs_component {
+    .header_container {
+        width: 100%;
+        display: inline-flex;
+        .header {
+            cursor: pointer;
+            padding: 10px 10px 5px 10px;
+            &.active {
+                background-color: $light-grey;
+                border-bottom: 2px solid $accent-color;
+            }
+        }
+        border-bottom: 1px solid $light-grey;
+    }
+}

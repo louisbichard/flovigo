@@ -9,7 +9,7 @@ flovigo.directive('fvWidget', function(
         },
         transclude: true,
         link: function($scope, $elem, $attrs, $ctrl) {
-            console.log('loaded core widget!');
+         
         }
     }
 });

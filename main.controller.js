@@ -1,5 +1,15 @@
-flovigo.controller('mainController', function($scope, $location) {
+flovigo.controller('mainController', function(
+    $scope,
+    $rootScope, 
+    $location
+) {
 
-    console.log('main controller');
+    $scope.openCheckIn = function() {
+        console.log('open check in');
+        $rootScope.$emit('shoji:toggle_shoji', {
+            directive_name: 'fvCheckIn',
+            id: _.random(0, 10)
+        });
+    };
 
 });

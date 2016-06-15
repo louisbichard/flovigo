@@ -4,7 +4,7 @@ flovigo.directive('fvTopBanner', function() {
         templateUrl: 'components/top_banner/top_banner.html',
         scope: {},
         link: function($scope, $elem, $attrs, $ctrl) {
-            console.log('loaded top banner!');
+            
         }
     }
 });

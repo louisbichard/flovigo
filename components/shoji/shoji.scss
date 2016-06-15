@@ -1,0 +1,22 @@
+.shoji_component {
+    position: absolute;
+    left: 0px;
+    width: 35%;
+    background-color: white;
+    height: calc(100vh);
+    z-index: 1;
+    box-shadow: $right-shadow;
+    .shoji_header {
+        padding: 10px;
+        border-bottom: 1px solid $light-grey;
+        height: 50px;
+        .shoji_title {
+            margin-top: 3px;
+            margin-left: 10px;
+            margin-top: 5px;
+            .fa-close {
+                cursor: pointer;
+            }
+        }
+    }
+}

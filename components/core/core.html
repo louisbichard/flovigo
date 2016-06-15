@@ -1,0 +1,18 @@
+<div class="core_component">
+    <div 
+        ng-repeat="core in core_skills" 
+        class="core_skill"
+        ng-class="{
+            low: core.score < 3,
+            medium: core.score >= 3 && core.score < 7,
+            high: core.score >= 7
+        }">
+        <p 
+            class="text-center"
+            ng-click="showCoreDetails()"
+        >
+            {{core.title}} ({{core.score}}/10)
+        </p>
+        <input type="range" min ="0" max="10" step ="1" ng-model="core.score"/>
+    </div>
+</div>

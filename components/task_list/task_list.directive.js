@@ -1,38 +1,30 @@
-flovigo.directive('fvTaskList', function() {
+flovigo.directive('fvTaskList', function(
+    $rootScope,
+    TaskService
+) {
     return {
         restrict: 'E',
         templateUrl: 'components/task_list/task_list.html',
         scope: {},
         link: function($scope, $elem, $attrs, $ctrl) {
 
-            $scope.tasks = [{
-                title: "A new task",                
-                date: moment().format('DD-MM-YYYY')
-            }, {
-                title: "A new task 2",                
-                date: moment().format('DD-MM-YYYY')
-            },{
-                title: "A new task 2",                
-                date: moment().format('DD-MM-YYYY')
-            },{
-                title: "A new task 2",                
-                date: moment().format('DD-MM-YYYY')
-            },{
-                title: "A new task 2",                
-                date: moment().format('DD-MM-YYYY')
-            },{
-                title: "A new task 2",                
-                date: moment().format('DD-MM-YYYY')
-            },{
-                title: "A new task 2",                
-                date: moment().format('DD-MM-YYYY')
-            },{
-                title: "A new task 2",                
-                date: moment().format('DD-MM-YYYY')
-            },{
-                title: "A new task 2",                
-                date: moment().format('DD-MM-YYYY')
-            }];
+            $scope.active = 0;
+
+            $scope.taskClick = function() {
+                $rootScope.$emit('shoji:toggle_shoji', {
+                    directive_name: 'fvTaskDetail',
+                    id: _.random(0, 10)
+                });
+            };
+
+            $scope.$watch('active', function() {
+                if ($scope.active === 0) {
+                    $scope.task_group = _.groupBy(TaskService.get(), TaskService.groupByUrgenceAndImportance);
+                } else {
+                    $scope.task_group = _.groupBy(TaskService.get(), 'pretty_date');
+                }
+            });
+
         }
     }
 });

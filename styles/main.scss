@@ -8,7 +8,8 @@
 $light-grey: #e9e9e9;
 $medium-grey: #c6c6c6;
 $dark-grey: #828282;
-$shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.1);
+$right-shadow: 5px 2px 5px 0 rgba(0, 0, 0, 0.1);
+$medium-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.1);
 
 $main-color: #455A64;
 $accent-color: #FF8A65;
@@ -25,9 +26,33 @@ $background-color: #f6f6f6;
     font-size: 1.3em;
 }
 
+.medium-grey {
+    color: $medium-grey;
+}
+
 body {
     font-family: 'Questrial', sans-serif;
     background-color: $background-color;
+}
+
+label {
+    color: $dark-grey;
+}
+
+.form-control {
+    padding-left: 0px;
+    border-radius: 0px;
+    border-bottom: 1px solid $medium-grey;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    -webkit-box-shadow: none;
+    &:active, &:focus {
+        box-shadow:0px;    
+        outline: none;
+        box-shadow: none;
+        border-bottom: 1px solid $accent-color;
+    }
 }
 
 // CORE
@@ -37,4 +62,8 @@ body {
 @import '../components/widget/widget.scss';
 @import '../components/top_banner/top_banner.scss';
 @import '../components/task_list/task_list.scss';
+@import '../components/task_detail/task_detail.scss';
 @import '../components/focus_area/focus_area.scss';
+@import '../components/shoji/shoji.scss';
+@import '../components/core/core.scss';
+@import '../components/tabs/tabs.scss';
