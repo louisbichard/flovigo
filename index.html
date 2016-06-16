@@ -35,26 +35,26 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <fv-widget title="Attribute focus area">
+                <fv-widget title="Attribute focus area" icon="wrench">
                     <fv-focus-area></fv-focus-area>
                 </fv-widget>
             </div>
         </div>
         <div class="row">
             <div class="col-md-8">
-                <fv-widget title="Tasks" help="Tasks">
+                <fv-widget title="Tasks" help="Tasks" icon="check-circle-o">
                     <fv-task-list></fv-task-list>
                 </fv-widget>
             </div>
             <div class="col-md-4">
-                <fv-widget title="Core">
+                <fv-widget title="Core" icon="road">
                     <fv-core></fv-core>
                 </fv-widget>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
-                <fv-widget title="Insights">
+                <fv-widget title="Insights" icon="eye">
                     <fv-insights></fv-insights>
                 </fv-widget>
             </div>
@@ -71,21 +71,32 @@
     <script src="app.js"></script>
     <script src="routes.js"></script>
     <script src="main.controller.js"></script>
-    <!-- #COMPONENTS -->
-    <script src="components/widget/widget.directive.js"></script>
-    <script src="components/top_banner/top_banner.directive.js"></script>
-    <script src="components/task_list/task_list.directive.js"></script>
-    <script src="components/focus_area/focus_area.directive.js"></script>
-    <script src="components/shoji/shoji.directive.js"></script>
-    <script src="components/task_detail/task_detail.directive.js"></script>
-    <script src="components/core/core.directive.js"></script>
-    <script src="components/check_in/check_in.directive.js"></script>
-    <script src="components/tabs/tabs.directive.js"></script>
-    <script src="components/task_tile/task_tile.directive.js"></script>
-    <script src="components/insights/insights.directive.js"></script>
-    <script src="components/help/help.directive.js"></script>
     <!-- #SERVICES -->
     <script src="services/task.service.js"></script>
+    <script src="services/core.service.js"></script>
+    <script src="services/attribute.service.js"></script>
+    <!-- #COMPONENTS -->
+    <script src="components/task_by_context/task_by_context.directive.js"></script>
+    <script src="components/task_next_actions/task_next_actions.directive.js"></script>
+    <script src="components/task_by_priority/task_by_priority.directive.js"></script>
+    <script src="components/attribute_detail/attribute_detail.directive.js"></script>
+    <script src="components/attributes_tile/attributes_tile.directive.js"></script>
+    <script src="components/task_by_date/task_by_date.directive.js"></script>
+    <script src="components/task_detail/task_detail.directive.js"></script>
+    <script src="components/core_detail/core_detail.directive.js"></script>
+    <script src="components/focus_area/focus_area.directive.js"></script>
+    <script src="components/top_banner/top_banner.directive.js"></script>
+    <script src="components/task_list/task_list.directive.js"></script>
+    <script src="components/task_tile/task_tile.directive.js"></script>
+    <script src="components/check_in/check_in.directive.js"></script>
+    <script src="components/insights/insights.directive.js"></script>
+    
+    <script src="components/widget/widget.directive.js"></script>
+    <script src="components/shoji/shoji.directive.js"></script>
+    <script src="components/core/core.directive.js"></script>
+    <script src="components/tabs/tabs.directive.js"></script>
+    <script src="components/help/help.directive.js"></script>
+    
 </body>
 
 </html>

@@ -21,7 +21,6 @@ flovigo.directive('fvShoji', function(
 
             $rootScope.$on('shoji:toggle_shoji', function(event, vals) {
                 shoji_module.init(vals);
-                console.log(vals);
             });
 
 
@@ -29,26 +28,36 @@ flovigo.directive('fvShoji', function(
                 
                 shoji_config: {
                     'fvTaskDetail': {
-                        title: 'Task detail'
+                        title: 'Task detail',
+                        icon: 'check-circle-o'
                     },
                     'fvHelp': {
-                        title: 'Help'
+                        title: 'Help',
+                        icon: 'question-mark'
+                    },
+                    'fvCoreDetail': {
+                        title: 'Core',
+                        icon: 'road'
                     }
                 },
 
                 init: function(vals) {
-                    shoji_module.compileDirective(vals.directive_name);
                     shoji_module.setupShojiTitle(vals);
+                    shoji_module.compileDirective(vals.directive_name);                    
                 },
 
                 setupShojiTitle: function(vals) {
                     $scope.title = _.get(shoji_module, '.shoji_config['+ vals.directive_name + '].title') || "Detail";
                     $scope.id = vals.id;
+                    $scope.icon = _.get(shoji_module, '.shoji_config['+ vals.directive_name + '].icon') || "check";
                 },
 
                 compileDirective: function(directive_name) {
 
                     var scope = $rootScope.$new(true);
+                    scope._shoji = {
+                        id: $scope.id
+                    }
 
                     directive_name = _.kebabCase(directive_name);
 

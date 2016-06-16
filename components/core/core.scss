@@ -1,9 +1,17 @@
 .core_component {
     height: 400px;
     .core_skill {
+        &:hover {
+            background-color: $light-grey;
+            cursor: pointer;
+        }
         margin-bottom: 5px;
-        padding: 0px 15px 0px 15px;
+        padding: 5px 15px 5px 15px;
         p {
+            &:hover {
+                color: $accent-color;
+            }
+            color: $dark-grey;
             margin: 0px;
         }
         &.low {

@@ -1,5 +1,6 @@
 flovigo.directive('fvCore', function(
-    $rootScope
+    $rootScope,
+    coreService
 ) {
     return {
         restrict: 'E',
@@ -8,28 +9,13 @@ flovigo.directive('fvCore', function(
         link: function($scope, $elem, $attrs, $ctrl) {
 
             $scope.showCoreDetails = function(){
-                alert('show core details');
+                $rootScope.$emit('shoji:toggle_shoji', {
+                    directive_name: 'fvCoreDetail',
+                    id: _.random(0, 10)
+                });
             };
 
-            $scope.core_skills = _.orderBy([{
-                title: "Wellbeing",
-                score: 2
-            },{
-                title: "Wealth",
-                score: 4
-            },{
-                title: "Finance",
-                score: 8
-            },{
-                title: "Career",
-                score: 9
-            },{
-                title: "Personal",
-                score: 10
-            },{
-                title: "Love",
-                score: 1
-            }], 'score');
+            $scope.core_skills = _.orderBy(coreService.get(), 'score');
         }
     }
 });

@@ -12,10 +12,9 @@ flovigo.directive('fvTaskTile', function(
             $scope.taskClick = function() {
                 $rootScope.$emit('shoji:toggle_shoji', {
                     directive_name: 'fvTaskDetail',
-                    id: _.random(0, 10)
+                    id: $scope.task.id
                 });
             };
-
         }
     }
 });

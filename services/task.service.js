@@ -18,63 +18,35 @@ flovigo.service('TaskService', function() {
         return "Trivial";
     };
 
-    this.get = function() {
-        return TaskService.tasks;
+    this.getByContext = function(tasks) {
+        return _.reduce(TaskService.get(), function(result, task) {
+            return _.reduce(task.contexts, function(prev, task_properties) {
+                (prev[task_properties] || (prev[task_properties] = [])).push(task);
+                return prev;
+            }, result);
+        }, {});
+    };
+
+    this.get = function(id) {
+        if (!id && id != 0) return TaskService.tasks;
+        else return _.find(TaskService.tasks, {id: id});
     };
 
     this.tasks = [{
-        title: "A new task",
+        id: 0,
+        title: "Look at Cal Newport blog from Rory",
         pretty_date: moment().calendar(null, calendar_opts),
         date: new Date(),
+        contexts: ['Computer', 'Home'],
         urgent: false,
         important: false
     }, {
-        title: "A new task 2",
-        pretty_date: moment().add(1, 'days').calendar(null, calendar_opts),
-        date: new Date(),
-        urgent: false,
-        important: false
-    }, {
-        title: "A new task 2",
-        pretty_date: moment().add(2, 'days').calendar(null, calendar_opts),
-        date: new Date(),
-        urgent: false,
-        important: true
-    }, {
-        title: "A new task 2",
-        pretty_date: moment().add(3, 'days').calendar(null, calendar_opts),
-        date: new Date(),
-        urgent: true,
-        important: true
-    }, {
-        title: "A new task 2",
-        pretty_date: moment().add(1, 'days').calendar(null, calendar_opts),
-        date: new Date(),
-        urgent: true,
-        important: false
-    }, {
-        title: "A new task 2",
-        pretty_date: moment().add(4, 'days').calendar(null, calendar_opts),
-        date: new Date(),
-        urgent: true,
-        important: true
-    }, {
-        title: "A new task 2",
+        id: 1,
+        title: "Create insight template",
         pretty_date: moment().calendar(null, calendar_opts),
         date: new Date(),
+        contexts: ['Computer'],
         urgent: true,
         important: true
-    }, {
-        title: "A new task 2",
-        pretty_date: moment().calendar(null, calendar_opts),
-        date: new Date(),
-        urgent: true,
-        important: true
-    }, {
-        title: "A new task 2",
-        pretty_date: moment().calendar(null, calendar_opts),
-        date: moment().format('Do MMMM'),
-        urgent: true,
-        important: false
     }];
 })

@@ -1,8 +1,10 @@
 <div class="focus_area_component">
-    <div class="focus_area" ng-repeat="focus_area in focus_areas">
+    <div 
+        class="focus_area" ng-repeat="focus_area in focus_areas"
+        ng-click="showAttributeDetails()"
+    >
         <p>
             {{focus_area.title}} 
-            <span class="bold-font"> ({{focus_area.score}} / 10)</span>
         </p>
     </div>
 </div>

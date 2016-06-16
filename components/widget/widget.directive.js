@@ -6,6 +6,7 @@ flovigo.directive('fvWidget', function(
         templateUrl: 'components/widget/widget.html',
         scope: {
             title: '@',
+            icon: '@',
             help: '@'
         },
         transclude: true,

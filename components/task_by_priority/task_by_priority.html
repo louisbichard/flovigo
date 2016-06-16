@@ -1,0 +1,12 @@
+<div class="task_by_priority_component">
+    <div class="task_groupings">
+        <div ng-repeat="(group, tasks) in task_group" class="task_group">
+            <p class="task_group_title"> {{group}} </p>
+            <div class="task_group_content">
+                <div ng-repeat="task in tasks">
+                    <fv-task-tile task="task"></fv-task-tile>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

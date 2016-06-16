@@ -1,6 +1,7 @@
 .focus_area_component {
     height: 40px;
     .focus_area {
+        padding: 10px;
         height: 20px;
         display: inline;
         position: relative;
@@ -10,8 +11,17 @@
         border: 1px solid $light-grey;
         height: 100%;
         color: $dark-grey;
-        &:nth-child(2), &:nth-child(3) {
+        &:nth-child(2),
+        &:nth-child(3) {
             margin-left: 5%;
+        }
+        &:hover {
+            background-color: $light-grey;
+            color: $accent-color;
+            cursor: pointer;
+        }
+        p {
+            margin: 0px;
         }
     }
 }
