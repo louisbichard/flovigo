@@ -1,10 +1,16 @@
 <div class="task_list_component">
-    <fv-tabs active="active" headers="['Priorities', 'This week', 'Immediate next actions', 'By Context']">
+    <fv-tabs active="active" headers="['Priorities (3)', 'This week (2)', 'Immediate next actions (3)', 'By Context (2)', 'In List (3)', 'Someday maybe (2)']">
 
         <fv-task-by-priority ng-if="active === 0"></fv-task-by-priority>        
         <fv-task-by-date ng-if="active === 1"></fv-task-by-date>        
         <fv-task-next-actions ng-if="active === 2"></fv-task-next-actions>        
         <fv-task-by-context ng-if="active === 3"></fv-task-by-context>        
+        <div ng-if="active === 4">
+            In list
+        </div>        
+        <div ng-if="active === 5">
+            Someday maybe
+        </div>        
 
     </fv-tabs>
 </div>

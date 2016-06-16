@@ -20,7 +20,7 @@
     <fv-top-banner></fv-top-banner>
     <div class="container">
         <div class="row">
-            <div class="col-md-2 col-md-offset-4">
+            <div class="col-md-2 col-md-offset-2">
                 <select class="form-control">
                     <option>Personal</option>
                     <option>Work</option>
@@ -32,6 +32,12 @@
                     Check in
                 </button>
             </div>
+            <div class="col-md-2">
+                <button class="btn btn-default" ng-click="openReview()">
+                    <i class="fa fa-pencil"></i>
+                    Review
+                </button>
+            </div>
         </div>
         <div class="row">
             <div class="col-md-12">
@@ -41,12 +47,12 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-9">
                 <fv-widget title="Tasks" help="Tasks" icon="check-circle-o">
                     <fv-task-list></fv-task-list>
                 </fv-widget>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <fv-widget title="Core" icon="road">
                     <fv-core></fv-core>
                 </fv-widget>
@@ -90,6 +96,7 @@
     <script src="components/task_tile/task_tile.directive.js"></script>
     <script src="components/check_in/check_in.directive.js"></script>
     <script src="components/insights/insights.directive.js"></script>
+    <script src="components/review/review.directive.js"></script>
     
     <script src="components/widget/widget.directive.js"></script>
     <script src="components/shoji/shoji.directive.js"></script>

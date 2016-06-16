@@ -8,7 +8,7 @@ flovigo.directive('fvCheckIn', function(
         scope: {},
         link: function($scope, $elem, $attrs, $ctrl) {
 
-            console.log('loaded check in !')
+            $scope.triggers = "Scrum, Testing, Code Review";
 
             var tasks = angular.copy(TaskService.get())
             $scope.tasks = tasks.splice(0, 3);

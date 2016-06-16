@@ -1,6 +1,7 @@
 flovigo.directive('fvTaskDetail', function(
     $rootScope,
-    TaskService
+    TaskService,
+    attributeService
 ) {
     return {
         restrict: 'E',
@@ -9,6 +10,8 @@ flovigo.directive('fvTaskDetail', function(
         link: function($scope, $elem, $attrs, $ctrl) {
 
             $scope.task = TaskService.get($scope.$parent._shoji.id);
+
+            $scope.attributes = attributeService.get();
             
         }
     }

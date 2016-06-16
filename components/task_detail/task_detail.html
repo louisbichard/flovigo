@@ -7,10 +7,7 @@
     <br>
     <label>Attribute</label>
     <select class="form-control">
-        <option>Daily chore</option>
-        <option>Meditate</option>
-        <option>Write in diary daily</option>
-        <option>Call family members more</option>
+        <option ng-repeat="attribute in attributes">{{attribute.title}} ({{attribute.id}})</option>
     </select>
     <br>
     <div class="row">
@@ -19,10 +16,10 @@
             <input type="date" class="form-control"></input>
         </div>
         <div class="col-md-6">
-            <input type="checkbox" aria-label="...">
+            <input type="checkbox" aria-label="..." ng-model="task.urgent">
             <label>Important?</label>
             <br>
-            <input type="checkbox" aria-label="...">
+            <input type="checkbox" aria-label="..." ng-model="task.important">
             <label>Urgent?</label>
         </div>
     </div>

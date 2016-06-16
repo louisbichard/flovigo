@@ -11,6 +11,10 @@ flovigo.service('attributeService', function() {
         is_focus: true,
         id: 0
     },{
+        title: "Be more patient and realistic",
+        is_focus: true,
+        id: 0
+    },{
         title: "Be more compassionate",
         is_focus: true,
         id: 1        
