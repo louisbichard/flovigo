@@ -1,7 +1,7 @@
 <div class="focus_area_component">
     <div 
         class="focus_area" ng-repeat="focus_area in focus_areas"
-        ng-click="showAttributeDetails()"
+        ng-click="showAttributeDetails(focus_area.id)"
     >
         <p>
             {{focus_area.title}} 

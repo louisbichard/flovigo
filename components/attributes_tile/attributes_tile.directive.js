@@ -4,10 +4,10 @@ flovigo.directive('fvAttributesTile', function(
     return {
         restrict: 'E',
         templateUrl: 'components/attributes_tile/attributes_tile.html',
-        scope: {},
+        scope: {
+            attribute: '='
+        },
         link: function($scope, $elem, $attrs, $ctrl) {
-
-            $scope.title ="Attribute title!"
         }
     }
 });

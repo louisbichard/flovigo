@@ -1,1 +1,3 @@
-<fv-task-tile task="task"></fv-task-tile>
+<h4> Task assigments </h4>
+<fv-task-tile ng-repeat="task in tasks" task="task"></fv-task-tile>
+<p ng-if="tasks.length === 0">No tasks yet assigned</p>

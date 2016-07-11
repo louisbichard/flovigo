@@ -1,20 +1,18 @@
-<label>
-    Core description</label>
-<textarea class="form-control" rows="3"></textarea>
+<label>Core title</label>
+<input class="form-control" type="" name="" ng-model="core.title">
 <br>
-<h4>
+<!-- <h4>
     <i class="fa fa-tachometer" aria-hidden="true"></i>
     Stats
 </h4>
 <p><strong>Tasks closed</strong>: 4</p>
 <p><strong>Tasks open</strong>: 3</p>
-<p><strong>Tasks closed in the last week</strong>: 2</p>
+<p><strong>Tasks closed in the last week</strong>: 2</p> -->
 <br>
 <h4>
     <i class="fa fa-wrench" aria-hidden="true"></i>
-    Attributes (3)
+    Attributes ({{attributes.length}})
  </h4>
-<div ng-repeat="rand in ['1', '2', '3']">
-    <fv-attributes-tile></fv-attributes-tile>
-    <fv-attribute-detail></fv-attribute-detail>
+<div ng-repeat="attribute in attributes">
+    <fv-attributes-tile attribute="attribute"></fv-attributes-tile>
 </div>

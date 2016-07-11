@@ -8,10 +8,10 @@ flovigo.directive('fvCore', function(
         scope: {},
         link: function($scope, $elem, $attrs, $ctrl) {
 
-            $scope.showCoreDetails = function(){
+            $scope.showCoreDetails = function(id){
                 $rootScope.$emit('shoji:toggle_shoji', {
                     directive_name: 'fvCoreDetail',
-                    id: _.random(0, 10)
+                    id: id
                 });
             };
 

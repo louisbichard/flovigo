@@ -1,22 +1,19 @@
 flovigo.directive('fvAttributeDetail', function(
     $rootScope,
-    TaskService
+    TaskService,
+    attributeService
 ) {
     return {
         restrict: 'E',
         templateUrl: 'components/attribute_detail/attribute_detail.html',
-        scope: {},
+        scope: {
+            attribute: '@'
+        },
         link: function($scope, $elem, $attrs, $ctrl) {
-            
-            $scope.title = [
-                'Get better at communicating',
-                'Go to more conferences',
-                'Meditate more',
-                'Spend more time with family'
-            ][_.random(0, 3)]
 
+            if(!$scope.attribute) $scope.attribute = attributeService.get($scope.$parent._shoji.id) 
 
-            $scope.task = TaskService.get()[0];
+            $scope.tasks = TaskService.getTasksForAttribute($scope.attribute.id);
 
         }
     }

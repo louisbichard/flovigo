@@ -8,8 +8,11 @@ flovigo.directive('fvTaskByPriority', function(
         scope: {},
         link: function($scope, $elem, $attrs, $ctrl) {
 
-            $scope.task_group = _.groupBy(TaskService.get(), TaskService.groupByUrgenceAndImportance);
-            
+            $scope.task_group = _.chain(TaskService.get())
+                .reject('is_closed')
+                .groupBy(TaskService.groupByUrgenceAndImportance)
+                .value();
+
         }
     }
 });

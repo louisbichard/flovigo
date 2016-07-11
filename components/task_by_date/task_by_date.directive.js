@@ -8,7 +8,10 @@ flovigo.directive('fvTaskByDate', function(
         scope: {},
         link: function($scope, $elem, $attrs, $ctrl) {
 
-            $scope.task_group = _.groupBy(TaskService.get(), 'pretty_date');
+            $scope.task_group = _.chain(TaskService.get())
+                .reject('is_closed')
+                .groupBy('pretty_date')
+                .value();
             
         }
     }

@@ -8,10 +8,10 @@ flovigo.directive('fvInsights', function(
         scope: {},
         link: function($scope, $elem, $attrs, $ctrl) {
 
-            $scope.active = _.random(0, 3);
+            $scope.active = _.random(0, 1);
 
-            var tasks = angular.copy(TaskService.get())
-            $scope.tasks = tasks.splice(0, 3);
+            // Insight -> 0
+            $scope.no_parent_tasks = TaskService.getTasksForAttribute(null);
         }
     }
 });
